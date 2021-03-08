@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href='https://fonts.googleapis.com/css?family=Space Mono' rel='stylesheet'>
+<style>
+
+body {font-family: 'Space Mono';font-size: 18px;}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 6px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;}
+
+img {
+  border: 0px solid #555;
+}
+
+.header {
+  padding: 75px;
+  text-align: center;
+  background: #ffffff;
+  color: black;
+}
+
+.header h1 {
+  font-size: 36px;
+  color: black;
+}
+
+body {
+  font-family: 'Space Mono';font-size: 18px;
+  margin: 0;
+}
+
+.main {   
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer {
+  padding: 0px;
+  text-align: right;
+  background: #ffffff;
+  font-size: 8px;
+  margin: 100px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 2000px) {
+  .row {   
+    flex-direction: column;
+  }
+
+/*.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}*/
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="header">
+ <h1>Hi, I'm your magic virtual corkscrew.</h1>
+
+<p>
+<br>
+</p>
+<img src="https://s4.gifyu.com/images/corkscrew_moving_250.gif" alt="corkscrew"  width=250/>
+
+<p>
+<br>
+</p>
+ <p>I cannot unscrew your life, but I open all the objects below, just click and see :</p>
+</div>
+
+
+ <div class="row">
+
+  <div class="column">
+    <img alt="" src="https://i.ibb.co/Y31Z0mw/wine-300.png" 
+            style="width:100%" id="wine" onclick="changeImage()"  />
+  </div>
+  <div class="column">
+    <img alt="" src="https://i.ibb.co/W5pp243/beer.png" 
+            style="width:100%" id="beer" onclick="modifyImage()" />
+  </div>
+  <div class="column">
+     <img alt="" src="https://i.ibb.co/F3g2bKK/giftbox.png" 
+            style="width:100%" id="giftbox" onclick="secondImage()" />
+
+</div>
+<div class="column">
+ <img alt="" src="https://i.ibb.co/zhcSgz6/treasurebox.png" 
+            style="width:100%" id="treasurebox" onclick="varyImage()" />
+<br><br><br><br><br>
+</div>
+
+
+<br>
+<br>
+<br>
+<div class="footer">
+<p>
+<br>
+</p>
+<p>
+<br>
+</p>
+  <h2>© schwarzerhighway 2021</h2>
+</div>
+
+</body>
+
+<script language="javascript">
+    function changeImage() {
+        var Image_Id = document.getElementById('wine');
+        if (document.getElementById("wine").src == "https://i.ibb.co/Y31Z0mw/wine-300.png") 
+        {
+            document.getElementById("wine").src = "https://i.ibb.co/RH7wkR8/wine-300-2.png";
+        }
+        else 
+        {
+            document.getElementById("wine").src = "https://i.ibb.co/Y31Z0mw/wine-300.png";
+        }
+    }
+  
+</script>
+
+<script language="javascript">
+    function modifyImage() {
+       var Image_Id = document.getElementById('beer');
+        if (document.getElementById("beer").src == "https://i.ibb.co/W5pp243/beer.png") 
+        {
+            document.getElementById("beer").src = "https://i.ibb.co/J2rP29m/beer-2.png";
+        }
+        else 
+        {
+            document.getElementById("beer").src = "https://i.ibb.co/W5pp243/beer.png";
+        }
+    }
+</script>
+
+<script language="javascript">
+    function secondImage() {
+       var Image_Id = document.getElementById('giftbox');
+        if (document.getElementById("giftbox").src == "https://i.ibb.co/F3g2bKK/giftbox.png") 
+        {
+            document.getElementById("giftbox").src = "https://i.ibb.co/LhnQy82/giftbox2.png";
+        }
+        else 
+        {
+            document.getElementById("giftbox").src = "https://i.ibb.co/F3g2bKK/giftbox.png";
+        }
+    }
+
+</script>
+
+<script language="javascript">
+    function varyImage() {
+       var Image_Id = document.getElementById('treasurebox');
+        if (document.getElementById("treasurebox").src == "https://i.ibb.co/zhcSgz6/treasurebox.png") 
+        {
+            document.getElementById("treasurebox").src = "https://i.ibb.co/VWPgV7n/treasurebox-2.png";
+        }
+        else 
+        {
+            document.getElementById("treasurebox").src = "https://i.ibb.co/j3dYRHB/treasurebox-3.png";
+        }
+    }
+</script>
+
+
+</html>
